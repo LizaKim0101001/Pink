@@ -1,0 +1,94 @@
+@white: #FFFFFF;
+@pink: #D22856;
+@active-text: rgba(255, 255, 255, 0.3);
+@active-button: rgba(210, 40, 86, 0.3);
+@blue: #283645;
+@green: #2AAB6D;
+@green-hover: #1C9B5E;
+@light-grey:#E5E5E5;
+@grey:#283645;
+@comment:#F2F2F2;
+
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width: 320px;
+@tablet-width-only: 1199px;
+//стили для форм об авторе
+.author-info{
+  border-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+.author-info__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.author-info__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.author-info__item__title{
+  padding-left: 43px;
+  margin-bottom: 5px;
+  border-style: none;
+  width: 280px;
+}
+.author-info__item__input{
+  padding-left: 19px;
+  margin-bottom: 17px;
+  border: 2px solid @light-grey;
+  box-sizing: border-box;
+  width: 280px;
+  height: 63px;
+}
+@media (min-width: @tablet-width){
+  // стили для блока информация
+  .author-info{
+    margin-bottom: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 625px;
+  }
+  .author-info__item{
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .author-info__item__title{
+    padding-left: 3px;
+    width: auto;
+    margin-right: 19px;
+  }
+  .author-info__item__input{
+    width: 100%;
+    margin-bottom: 53px;
+  }
+  .author-info__item:last-child .author-info__item__input{
+    margin-bottom: 0;
+  }
+}
+@media (min-width: @desktop-width){
+  //
+  .author-info{
+    margin: 0;
+    margin-top: 18px;
+    width: 435px;
+  }
+  .author-info__item{
+    margin-bottom: 52px;
+  }
+  .author-info__item__title{
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+  }
+  .author-info__item__input{
+    margin-bottom: 0px;
+  }
+  .author-info__item:last-child{
+    margin-bottom: 0;
+  }
+}

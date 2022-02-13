@@ -1,0 +1,151 @@
+@white: #FFFFFF;
+@pink: #D22856;
+@active-text: rgba(255, 255, 255, 0.3);
+@active-button: rgba(210, 40, 86, 0.3);
+@blue: #283645;
+@green: #2AAB6D;
+@green-hover: #1C9B5E;
+@light-grey:#E5E5E5;
+@grey:#283645;
+@comment:#F2F2F2;
+
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width: 320px;
+@tablet-width-only: 1199px;
+
+// стили для текста
+.pop-up__title{
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: @black;
+}
+.pop-up__text{
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: @black;
+}
+.pop-up{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+// стили для модального окна
+.succses{
+  width: 100vw;
+  top: 700px;
+  background: @white;
+}
+.pop-up__title{
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.succses__text{
+  width: 265px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+}
+.succses__button_container{
+  height: 163px;
+  background-color: @comment;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.succses__button{
+  margin: 0;
+}
+// стили для модального окна с ошибкой
+.error{
+  width: 100vw;
+  height: 290px;
+  top: 226px;
+  bottom: auto;
+  background: @white;
+}
+.error__text{
+  margin-bottom: 40px;
+}
+.error__button{
+  display: block;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: @tablet-width){
+  .pop-up__title{
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .pop-up__text{
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .pop-up{
+    width: 460px;
+  }
+  //стили для error
+  .error{
+    margin: auto;
+    height: 366px;
+    top: 10px;
+  }
+  .error__title{
+    padding-top: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+  .error__text{
+    padding-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .error__button{
+    margin: 33px auto 0 auto;
+  }
+  // стили для успешной отправки
+  .succses{
+    margin: auto;
+    height: 430px;
+    top: 270px;
+  }
+  .succses__title{
+    width: 300px;
+    padding-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .succses__text{
+    padding-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 310px;
+  }
+  .succses__button_container{
+    margin-top: 30px;
+  }
+}

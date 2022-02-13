@@ -1,0 +1,125 @@
+@white: #FFFFFF;
+@pink: #D22856;
+@active-text: rgba(255, 255, 255, 0.3);
+@active-button: rgba(210, 40, 86, 0.3);
+@blue: #283645;
+@green: #2AAB6D;
+@green-hover: #1C9B5E;
+@light-grey:#E5E5E5;
+@grey:#283645;
+@comment:#F2F2F2;
+
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width: 320px;
+@tablet-width-only: 1199px;
+// радио кнопки для опроса спользованного ПО
+.application{
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+  border-style: none;
+}
+.application-wrapper{
+  width: 280px;
+  margin: 0 auto;
+}
+.application__list{
+  margin: 0;
+  padding: 40px 0 0 71px;;
+  list-style: none;
+}
+.application__item{
+  margin-bottom: 45px;
+}
+.application__item:last-child{
+  margin-bottom: 54px;
+}
+.application__item_text{
+  position: relative;
+}
+.application__item_input + .application__item_text::before{
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: -8px;
+  width: 37px;
+  height: 37px;
+  border: 2px solid @light-grey;
+  border-radius: 50%;
+}
+.application__item_input:hover + .application__item_text::before{
+  border-color: @black;
+}
+.application__item_input:active + .application__item_text::before{
+  border-color: @pink;
+}
+.application__item_input:checked + .application__item_text::after{
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -57px;
+  width: 15px;
+  height: 15px;
+  background-color: @pink;
+  border-radius: 50%;
+}
+@media (min-width: @tablet-width){
+  // стили для выбора по
+  .application{
+    margin-bottom: 66px;
+  }
+  .application-wrapper{
+    border: 2px solid @light-grey;
+    border-radius: 1px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 620px;
+  }
+  .application__title{
+    margin: 0 auto;
+    width: 365px;
+    position: relative;
+    top: -15px;
+    background-color: @white;
+  }
+  .application__list{
+    padding-left: 119px;
+    padding-top: 27px;
+  }
+  .application__item:last-child{
+    margin-bottom: 58px;
+  }
+  .application__item_input + .application__item_text::before{
+    left: -61px;
+  }
+  .application__item_input:checked + .application__item_text::after{
+    top: 5px;
+    left: -48px;
+  }
+}
+@media (min-width: @desktop-width){
+  //
+  .application{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .application-wrapper{
+    width: 435px;
+    margin-top: 14px;
+  }
+  .application__title{
+    position: relative;
+    top: -16px;
+  }
+  .application__list{
+    padding-left: 132px;
+  }
+  .application__item{
+    margin-bottom: 46px;
+  }
+  .application__item:last-child{
+    margin-bottom: 56px;
+  }
+}

@@ -1,0 +1,230 @@
+@white: #FFFFFF;
+@pink: #D22856;
+@active-text: rgba(255, 255, 255, 0.3);
+@active-button: rgba(210, 40, 86, 0.3);
+@blue: #283645;
+@green: #2AAB6D;
+@green-hover: #1C9B5E;
+@light-grey:#E5E5E5;
+@grey:#283645;
+@dark-blue: #1D2631;
+
+
+// Viewports
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width: 1199px;
+
+.availability{
+  position: relative;
+}
+.availability__img-container{
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 286px;
+  width: 320px;
+}
+.availability__img{
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  object-fit: cover;
+}
+.availability__title{
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 29px;
+  width: 280px;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  color: @white;
+}
+.availability__list{
+  margin: 0;
+  padding: 0;
+  margin: 32px 0 17px 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.availability__item{
+  margin-right: 35px;
+}
+.availability__item:last-child{
+  margin-right: 0;
+}
+.availability__description{
+  margin: 0;
+  padding: 0 20px;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: @white;
+  order: 1;
+}
+.availability__button{
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  color: @white;
+  background: none;
+  border: 3px solid @white;
+  border-radius: 29px;
+  order: 1;
+  width: 280px;
+  height: 55px;
+}
+.availability__button:hover,
+.availability__button:focus{
+  background-color: @white;
+  color: @pink;
+}
+.availability__button:active{
+  color: @active-button;
+}
+.availability__link{
+  text-align: center;
+  display: block;
+}
+.availability-mobile{
+  background-color: @dark-blue;
+  padding-top: 27px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width){
+  .availability-wrapper{
+    width: 620px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 320px;
+    grid-template-rows: 220px 351px;
+  }
+  .availability__title{
+    margin-top: 45px;
+    width: 240px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: Open Sans;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    z-index: 1;
+  }
+  .availability-mobile{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 0;
+    background: transparent;
+    z-index: 1;
+  }
+  .availability__list{
+    margin-top: 47px;
+    margin-bottom: 27px;
+  }
+  .availability__item{
+    margin-right: 37px;
+  }
+  .availability__img{
+    width: 660px;
+    position: relative;
+    left: -20px;
+  }
+  .availability__img-container{
+    padding-top: 26px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
+  }
+  .availability__description{
+    font-family: Open Sans;
+    padding: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .availability__button{
+    width: 300px;
+  }
+}
+@media (min-width: @desktop-width){
+  .availability-wrapper{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 37px 263px 640px;
+    grid-template-rows: 266px 404px;
+  }
+  .availability{
+    padding-left: 0px;
+  }
+  .availability__img-container{
+    width: 1050px;
+    height: 645px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .availability__img{
+    width: 1050px;
+    object-fit: cover;
+  }
+  .availability__title{
+    padding-top: 16px;
+    width: 300px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 68px;
+    margin: 12px 0 0 0;
+  }
+  .availability-mobile{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .availability__list{
+    margin-top: 68px;
+    margin-bottom: 47px;
+  }
+  .availability__button{
+    height: 56px;
+    font-family: Open Sans;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
